@@ -1,0 +1,78 @@
+@import './fonts.css';
+
+:root {
+  --general-text: #2b2b2d;
+  --general-bg: #fff;
+  --button-color: #e8a20c;
+  --gray-color: #f4f4f4;
+  --transition: .3s;
+}
+
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: 'Inter', "Arial", sans-serif;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  font-weight: inherit;
+}
+
+input {
+  outline: none;
+  border: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+body {
+  color: var(--general-text);
+  background: var(--general-bg);
+
+}
+
+.container {
+  max-width: 1870px;
+  margin: 0 auto;
+  padding: 0 15px;
+  height: 100%;
+}
+
