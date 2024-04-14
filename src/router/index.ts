@@ -8,8 +8,16 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      name: RouteNamesEnum.home,
-      component: () => import('pages/HomePage.vue'),
+      name: RouteNamesEnum.welcome,
+      component: () => import('pages/WelcomePage.vue'),
+      meta: {
+        layout: AppLayoutsEnum.default,
+      },
+    },
+    {
+      path: '/general',
+      name: RouteNamesEnum.general,
+      component: () => import('pages/GeneralPage.vue'),
       meta: {
         layout: AppLayoutsEnum.default,
       },

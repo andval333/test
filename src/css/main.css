@@ -1,8 +1,9 @@
 @import './fonts.css';
 
 :root {
-  --general-text: #2b2b2d;
-  --general-bg: #fff;
+  --general-text: #f0f0f0;
+  --general-bg: #111827;
+  --second-color: #ffd859;
   --button-color: #e8a20c;
   --gray-color: #f4f4f4;
   --transition: .3s;
@@ -67,12 +68,12 @@ body {
   color: var(--general-text);
   background: var(--general-bg);
 
+
 }
 
 .container {
-  max-width: 1870px;
+  max-width: 1570px;
   margin: 0 auto;
   padding: 0 15px;
   height: 100%;
 }
-
