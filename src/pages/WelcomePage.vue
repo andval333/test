@@ -24,7 +24,9 @@ const advantages = [
       <div class="hero__inner">
         <h1 class="hero__title">Place List</h1>
         <h3 class="hero__subtitle">Оставьте отзыв о месте, в котором Вы побывали</h3>
-        <button class="hero__button"><router-link to="/">Начать пользоваться</router-link></button>
+        <button class="hero__button">
+          <router-link to="/general">Начать пользоваться</router-link>
+        </button>
       </div>
     </div>
   </section>
@@ -73,11 +75,33 @@ const advantages = [
   font-size: 32px;
 }
 .hero__button {
+  position: relative;
+  padding: 0;
   max-width: 300px;
   width: 100%;
   border-radius: 15px;
   background: linear-gradient(235deg, rgb(103, 151, 255) 0%, rgba(74, 79, 255, 1) 100%);
   transition: box-shadow var(--transition);
+}
+.hero__button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgb(103, 151, 255);
+  border-radius: 15px;
+  z-index: -1;
+  transition: all var(--transition);
+  animation: ping 4s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+@keyframes ping {
+  15%,
+  100% {
+    transform: scale(1.25, 2);
+    opacity: 0;
+  }
 }
 .hero__button:hover {
   box-shadow: 0 0 20px #ffffff62;

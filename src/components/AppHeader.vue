@@ -101,9 +101,25 @@ const headerNav = [
   align-items: center;
   justify-content: space-between;
 }
+.header__nav-item {
+  position: relative;
+}
 .header__nav-item a {
   color: var(--general-text);
   font-size: 18px;
+}
+.header__nav-item::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 100%;
+  right: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.603);
+  transition: right var(--transition);
+}
+.header__nav-item:hover::after {
+  right: 0;
 }
 .header__location {
   display: flex;
